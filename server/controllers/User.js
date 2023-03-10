@@ -199,7 +199,7 @@ export const updateProfile = catchAsyncError(async (req, res) => {
 
   res
     .status(200)
-    .json({ success: true, message: "Profile Updated Suucessfully" });
+    .json({ success: true, message: "Profile Updated Successfully" });
 });
 
 // Update Password
@@ -238,7 +238,6 @@ export const updatePassword = catchAsyncError(async (req, res, next) => {
 // Forget Password
 export const forgetPassword = catchAsyncError(async (req, res, next) => {
   const { email } = req.body;
-  console.log(email);
 
   if (!email) {
     return next(new ErrorHandler("Plesae enter email", 400));
